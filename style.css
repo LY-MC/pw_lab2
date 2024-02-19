@@ -1,0 +1,17 @@
+.background-image {
+  background-image: url("./assets/bg.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.background-image h1 {
+  background-color: rgba(0, 0, 0, 0.486);
+  padding: 2vw;
+  font-size: 36px;
+  color: rgb(232, 232, 232);
+}
