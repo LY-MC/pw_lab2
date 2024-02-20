@@ -8,11 +8,11 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <section class="background-image">
+    <section id="home" class="background-image">
       <header>
         <nav>
           <ul>
-            <li><a href="#">Home</a></li>
+            <li><a href="#home">Home</a></li>
             <li><a href="#why-us">Why Us</a></li>
             <li><a href="#faq">FAQ</a></li>
             <li><a href="#contact-form">Contact Us</a></li>
@@ -139,7 +139,13 @@
             const targetId = this.getAttribute("href").substring(1);
             const targetSection = document.getElementById(targetId);
             if (targetSection) {
-              targetSection.scrollIntoView({ behavior: "smooth" });
+              const headerHeight =
+                document.querySelector("header").offsetHeight;
+              const targetPosition = targetSection.offsetTop - headerHeight;
+              window.scrollTo({
+                top: targetPosition,
+                behavior: "smooth",
+              });
             }
           });
         });

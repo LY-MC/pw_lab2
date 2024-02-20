@@ -4,12 +4,13 @@ body {
 }
 
 header {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.8);
   padding: 20px 0;
+  z-index: 1000;
 }
 
 nav ul {
@@ -65,8 +66,8 @@ nav ul li a:hover {
   }
 }
 
-.why-us {
-  padding: 25px 20px;
+section {
+  padding: 25px 20px 0 20px;
   text-align: center;
 }
 
@@ -102,11 +103,6 @@ nav ul li a:hover {
 
 .feature:last-child {
   margin-right: 0;
-}
-
-.faq {
-  padding: 0 20px 25px 20px;
-  text-align: center;
 }
 
 .faq h2 {
@@ -155,8 +151,7 @@ nav ul li a:hover {
 }
 
 .contact-form {
-  padding: 0 20px 25px 20px;
-  text-align: center;
+  padding: 25px 20px;
 }
 
 .contact-form h2 {
