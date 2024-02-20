@@ -13,15 +13,15 @@
         <nav>
           <ul>
             <li><a href="#">Home</a></li>
-            <li><a href="#">Menu</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#why-us">Why Us</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#contact-form">Contact Us</a></li>
           </ul>
         </nav>
       </header>
       <h1>Best bakery shop in Moldova</h1>
     </section>
-    <section class="why-us">
+    <section id="why-us" class="why-us">
       <h2>Why We Are Better Than Others</h2>
       <div class="feature">
         <img src="/assets/sandwich.png" alt="Feature 1" />
@@ -46,7 +46,7 @@
         <p>Pastries, cakes, cookies, and more!</p>
       </div>
     </section>
-    <section class="faq">
+    <section id="faq" class="faq">
       <h2>Frequently Asked Questions</h2>
       <div class="question">
         <h3 class="question-title">Question 1: What are your opening hours?</h3>
@@ -73,7 +73,7 @@
         </p>
       </div>
     </section>
-    <section class="contact-form">
+    <section id="contact-form" class="contact-form">
       <h2>Provide Your Contact Information</h2>
       <form action="#" method="post">
         <div class="form-group">
@@ -129,6 +129,19 @@
             "Thank you for submitting the form! We will recall you shortly."
           );
           this.reset();
+        });
+
+        const navLinks = document.querySelectorAll("nav a");
+
+        navLinks.forEach(function (link) {
+          link.addEventListener("click", function (event) {
+            event.preventDefault();
+            const targetId = this.getAttribute("href").substring(1);
+            const targetSection = document.getElementById(targetId);
+            if (targetSection) {
+              targetSection.scrollIntoView({ behavior: "smooth" });
+            }
+          });
         });
       });
     </script>
