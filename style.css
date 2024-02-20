@@ -214,3 +214,43 @@ button[type="submit"]:hover {
 button[type="submit"]:active {
   transform: translateY(2px);
 }
+
+footer {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  font-size: 10px;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-content nav {
+  margin-bottom: 10px;
+}
+
+.footer-content nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-content nav ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.footer-content nav ul li:last-child {
+  margin-right: 0;
+}
+
+.footer-content nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-content nav ul li a:hover {
+  text-decoration: underline;
+}
