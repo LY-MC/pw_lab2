@@ -1,3 +1,7 @@
+body {
+  background-color: rgba(181, 149, 102, 0.612);
+}
+
 header {
   position: absolute;
   top: 0;
@@ -61,7 +65,6 @@ nav ul li a:hover {
 }
 
 .why-us {
-  background-color: rgba(181, 149, 102, 0.612);
   padding: 25px 20px;
   text-align: center;
 }
@@ -92,10 +95,60 @@ nav ul li a:hover {
 }
 
 .feature p {
-  font-size: 14px;
+  font-size: 18px;
   margin-bottom: 20px;
 }
 
 .feature:last-child {
   margin-right: 0;
+}
+
+.faq {
+  padding: 0 20px 25px 20px;
+  text-align: center;
+}
+
+.faq h2 {
+  font-size: 28px;
+  margin-bottom: 25px;
+  font-weight: bold;
+}
+
+.question {
+  width: 50vw; 
+  margin: 0 auto 20px; 
+  text-align: 50vw;
+  border: solid 1px #353535;
+  border-radius: 30px;
+  padding: 10px 20px; 
+}
+
+.question h3 {
+  font-size: 22px;
+}
+
+.question-title {
+  font-weight: bold;
+  cursor: pointer; 
+}
+
+.answer {
+  display: none; 
+}
+
+.question.open .answer {
+  display: block;
+  margin-top: 10px;
+  font-size: 22px;
+} 
+
+.question-title::after {
+  content: "+";
+  float: right; 
+  margin-left: 10px; 
+}
+
+.question.open .question-title::after {
+  content: "-"; 
+  font-size: 28px;
 }

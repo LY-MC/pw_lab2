@@ -46,5 +46,31 @@
         <p>Pastries, cakes, cookies, and more!</p>
       </div>
     </section>
+    <section class="faq">
+      <h2>Frequently Asked Questions</h2>
+      <div class="question">
+        <h3 class="question-title">Question 1: What are your opening hours?</h3>
+        <p class="answer">Our bakery shop is open from 8:00 AM to 7:00 PM, Monday to Saturday.</p>
+      </div>
+      <div class="question">
+        <h3 class="question-title">Question 2: Do you offer gluten-free options?</h3>
+        <p class="answer">Yes, we offer a variety of gluten-free options, including bread, pastries, and cakes.</p>
+      </div>
+      <div class="question">
+        <h3 class="question-title">Question 3: Can I place a custom order for an event?</h3>
+        <p class="answer">Absolutely! We specialize in custom orders for weddings, birthdays, and other events. Contact us to discuss your needs.</p>
+      </div>
+    </section>
+    
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const questions = document.querySelectorAll('.question');
+        questions.forEach(function (question) {
+          question.addEventListener('click', function () {
+            this.classList.toggle('open'); 
+          });
+        });
+      });
+      </script>
   </body>
 </html>
