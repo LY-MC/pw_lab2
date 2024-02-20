@@ -50,27 +50,76 @@
       <h2>Frequently Asked Questions</h2>
       <div class="question">
         <h3 class="question-title">Question 1: What are your opening hours?</h3>
-        <p class="answer">Our bakery shop is open from 8:00 AM to 7:00 PM, Monday to Saturday.</p>
+        <p class="answer">
+          Our bakery shop is open from 8:00 AM to 7:00 PM, Monday to Saturday.
+        </p>
       </div>
       <div class="question">
-        <h3 class="question-title">Question 2: Do you offer gluten-free options?</h3>
-        <p class="answer">Yes, we offer a variety of gluten-free options, including bread, pastries, and cakes.</p>
+        <h3 class="question-title">
+          Question 2: Do you offer gluten-free options?
+        </h3>
+        <p class="answer">
+          Yes, we offer a variety of gluten-free options, including bread,
+          pastries, and cakes.
+        </p>
       </div>
       <div class="question">
-        <h3 class="question-title">Question 3: Can I place a custom order for an event?</h3>
-        <p class="answer">Absolutely! We specialize in custom orders for weddings, birthdays, and other events. Contact us to discuss your needs.</p>
+        <h3 class="question-title">
+          Question 3: Can I place a custom order for an event?
+        </h3>
+        <p class="answer">
+          Absolutely! We specialize in custom orders for weddings, birthdays,
+          and other events. Contact us to discuss your needs.
+        </p>
       </div>
     </section>
-    
+    <section class="contact-form">
+      <h2>Provide Your Contact Information</h2>
+      <form action="#" method="post">
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+        <div class="form-group">
+          <label for="surname">Surname:</label>
+          <input type="text" id="surname" name="surname" required />
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number:</label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            required
+            pattern="[0-9+]+"
+          />
+        </div>
+        <div class="form-group">
+          <label for="request">What can we help you with?</label>
+          <textarea id="request" name="request" rows="4" required></textarea>
+        </div>
+        <button type="submit">Recall me</button>
+      </form>
+    </section>
+
     <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        const questions = document.querySelectorAll('.question');
+      document.addEventListener("DOMContentLoaded", function () {
+        const questions = document.querySelectorAll(".question");
         questions.forEach(function (question) {
-          question.addEventListener('click', function () {
-            this.classList.toggle('open'); 
+          question.addEventListener("click", function () {
+            this.classList.toggle("open");
           });
         });
+
+        const form = document.querySelector(".contact-form form");
+        form.addEventListener("submit", function (event) {
+          event.preventDefault();
+          alert(
+            "Thank you for submitting the form! We will recall you shortly."
+          );
+          this.reset();
+        });
       });
-      </script>
+    </script>
   </body>
 </html>
