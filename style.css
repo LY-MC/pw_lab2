@@ -53,3 +53,49 @@ nav ul li a:hover {
   font-size: 36px;
   color: rgb(232, 232, 232);
 }
+
+@media screen and (max-width: 340px) {
+  nav ul li a {
+    font-size: 16px;
+  }
+}
+
+.why-us {
+  background-color: rgba(181, 149, 102, 0.612);
+  padding: 25px 20px;
+  text-align: center;
+}
+
+.why-us h2 {
+  font-size: 28px;
+  margin-bottom: 25px;
+  font-weight: bold;
+}
+
+.feature {
+  margin-right: 30px;
+  display: inline-block;
+  width: 25vw;
+  vertical-align: top;
+}
+
+.feature img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.feature h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.feature p {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.feature:last-child {
+  margin-right: 0;
+}
