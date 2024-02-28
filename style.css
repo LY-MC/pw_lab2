@@ -33,7 +33,7 @@ nav ul li a {
   color: white;
   text-decoration: none;
   font-size: 18px;
-  padding: 5px 10px;
+  padding: 5px 1vw;
   transition: all 0.3s ease;
 }
 
@@ -56,13 +56,20 @@ nav ul li a:hover {
 .background-image h1 {
   background-color: rgba(0, 0, 0, 0.486);
   padding: 2vw;
-  font-size: 36px;
+  font-size: 56px;
   color: rgb(232, 232, 232);
 }
 
-@media screen and (max-width: 340px) {
-  nav ul li a {
-    font-size: 16px;
+@media screen and (max-width: 420px) {
+  nav ul li {
+    margin-right: 10px;
+  }
+}
+
+
+@media screen and (max-width: 390px) {
+  .footer-last {
+    margin-top: 10px;
   }
 }
 
@@ -71,17 +78,26 @@ section {
   text-align: center;
 }
 
+
 .why-us h2 {
   font-size: 28px;
   margin-bottom: 25px;
   font-weight: bold;
 }
 
+.feature-container {
+  display: flex;
+}
+
 .feature {
+  justify-content: space-between;
   margin-right: 30px;
-  display: inline-block;
-  width: 25vw;
+  max-width: 30vw;
   vertical-align: top;
+}
+
+.feature:last-child {
+  margin-right: 0px;
 }
 
 .feature img {
@@ -117,7 +133,7 @@ section {
   text-align: 50vw;
   border: solid 1px #353535;
   border-radius: 30px;
-  padding: 10px 20px;
+  padding: 10px 10px 10px 20px;
 }
 
 .question h3 {
@@ -127,6 +143,8 @@ section {
 .question-title {
   font-weight: bold;
   cursor: pointer;
+  position: relative;
+  padding-right: 35px;
 }
 
 .answer {
@@ -141,13 +159,16 @@ section {
 
 .question-title::after {
   content: "+";
-  float: right;
-  margin-left: 10px;
+  position: absolute; 
+  top: 50%; 
+  right: 5px; 
+  transform: translateY(-50%); 
+  font-size: 28px;
 }
 
 .question.open .question-title::after {
   content: "-";
-  font-size: 28px;
+  font-size: 36px;
 }
 
 .contact-form {
@@ -173,7 +194,7 @@ section {
 .form-group input,
 .form-group textarea {
   font-size: 18px;
-  width: 30vw;
+  width: 50%;
   padding: 10px;
   border: 1px solid #ccc;
   background-color: #ffffff8f;
@@ -219,7 +240,7 @@ footer {
 }
 
 .footer-content {
-  max-width: 1200px;
+  width: 100vw;
   margin: 0 auto;
 }
 
@@ -227,42 +248,19 @@ footer {
   margin-bottom: 10px;
 }
 
-.footer-content nav ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-.footer-content nav ul li {
-  display: inline-block;
-  margin-right: 20px;
-}
-
-.footer-content nav ul li:last-child {
-  margin-right: 0;
-}
-
-.footer-content nav ul li a {
-  color: white;
-  text-decoration: none;
-}
-
-.footer-content nav ul li a:hover {
-  text-decoration: underline;
-}
-
 .mascot-tooltip {
   display: none;
   position: absolute;
   bottom: calc(100% - 10px);
   right: -50%;
-  background-color: #ffffffe2;
+  background-color: #ebe2d6;
   color: black;
   padding: 15px;
   width: 130px;
   border-radius: 30px;
   font-size: 18px;
   z-index: 100;
-  margin-right: 7vw;
+  margin-right: 110px;
 }
 
 .mascot:hover .mascot-tooltip {
@@ -277,15 +275,15 @@ footer {
 }
 
 .mascot img {
-  width: 80px;
+  width: 90px;
   height: auto;
-  background-color: #ffffffe2;
+  background-color: #ebe2d6;
   border-radius: 30px;
   animation: mascot-jump 2s infinite alternate ease-in-out;
 }
 
 .mascot-tilt {
-  animation: mascot-tilt 1s infinite alternate ease-in-out
+  animation: mascot-tilt 1s infinite alternate ease-in-out;
 }
 
 @keyframes mascot-appear {
@@ -312,7 +310,8 @@ footer {
 }
 
 @keyframes mascot-tilt {
-  0%, 100% {
+  0%,
+  100% {
     transform: rotate(0deg);
   }
   35% {
@@ -320,5 +319,61 @@ footer {
   }
   65% {
     transform: rotate(-20deg);
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .background-image h1 {
+    font-size: 42px;
+  }
+
+  .feature-container {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .feature,
+  .feature:last-child {
+    max-width: 90%;
+    margin: 0 auto 20px;
+  }
+
+  .feature img {
+    width: 90%;
+    max-width: 650px;
+  }
+
+  .question {
+    width: 90%;
+  }
+
+  .form-group input,
+  .form-group textarea,
+  button[type="submit"] {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 748px) {
+  .mascot img {
+    width: 70px;
+  }
+
+  .mascot-tooltip {
+    right: -70%;
+    width: 100px;
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 1450px) and (min-width: 1000px) {
+  .question {
+    width: 70%;
+  }
+
+  .form-group input,
+  .form-group textarea,
+  button[type="submit"] {
+    width: 70%;
   }
 }
