@@ -171,6 +171,10 @@ section {
   padding: 10px 10px 10px 20px;
 }
 
+.question:last-child {
+  margin: 0 auto;
+}
+
 .question h3 {
   font-size: 22px;
 }
@@ -281,7 +285,7 @@ button[type="submit"]:active {
 }
 
 .call-us a {
-  color: black;
+  color: rgb(37, 37, 37);
   text-decoration: underline;
 } 
 
