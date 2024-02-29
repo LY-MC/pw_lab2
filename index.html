@@ -15,38 +15,43 @@
             <li><a href="#home">Home</a></li>
             <li><a href="#why-us">Why Us</a></li>
             <li><a href="#faq">FAQ</a></li>
-            <li><a href="#contact-form">Contact Us</a></li>
           </ul>
         </nav>
+        <div class="contact-container">
+          <a href="#contact-form" class="contact-us"
+            >Contact Us <img src="./assets/phone.png" alt=""
+          /></a>
+        </div>
       </header>
+
       <h1>Best bakery shop in Moldova</h1>
     </section>
     <section id="why-us" class="why-us">
       <h2>Why We Are Better Than Others</h2>
       <div class="feature-container">
-      <div class="feature">
-        <img src="/assets/sandwich.png" alt="Feature 1" />
-        <h3>Gourmet Sandwiches and Savory Items</h3>
-        <p>
-          This provides customers with a wider range of options for breakfast,
-          lunch, or snacks throughout the day.
-        </p>
+        <div class="feature">
+          <img src="/assets/sandwich.png" alt="Feature 1" />
+          <h3>Gourmet Sandwiches and Savory Items</h3>
+          <p>
+            This provides customers with a wider range of options for breakfast,
+            lunch, or snacks throughout the day.
+          </p>
+        </div>
+        <div class="feature">
+          <img src="/assets/breads.jpg" alt="Feature 2" />
+          <h3>Artisanal Bread Selection</h3>
+          <p>
+            A variety of bread types such as sourdough, ciabatta, baguettes, and
+            specialty loaves made with high-quality ingredients and traditional
+            techniques.
+          </p>
+        </div>
+        <div class="feature">
+          <img src="/assets/cakes.jpg" alt="Feature 3" />
+          <h3>Freshly Baked Goods</h3>
+          <p>Pastries, cakes, cookies, and more!</p>
+        </div>
       </div>
-      <div class="feature">
-        <img src="/assets/breads.jpg" alt="Feature 2" />
-        <h3>Artisanal Bread Selection</h3>
-        <p>
-          A variety of bread types such as sourdough, ciabatta, baguettes, and
-          specialty loaves made with high-quality ingredients and traditional
-          techniques.
-        </p>
-      </div>
-      <div class="feature">
-        <img src="/assets/cakes.jpg" alt="Feature 3" />
-        <h3>Freshly Baked Goods</h3>
-        <p>Pastries, cakes, cookies, and more!</p>
-      </div>
-    </div>
     </section>
     <section id="faq" class="faq">
       <h2>Frequently Asked Questions</h2>
@@ -119,7 +124,7 @@
       <div class="mascot-tilt">
         <img src="./assets/bun.png" alt="Bakery Mascot" />
       </div>
-        <div class="mascot-tooltip">Welcome to our bakery shop!</div>
+      <div class="mascot-tooltip">Welcome to our bakery shop!</div>
     </div>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
@@ -140,6 +145,7 @@
         });
 
         const navLinks = document.querySelectorAll("nav a");
+        const contactUsLink = document.querySelector(".contact-us"); // Get the contact-us link
 
         navLinks.forEach(function (link) {
           link.addEventListener("click", function (event) {
@@ -156,6 +162,20 @@
               });
             }
           });
+        });
+
+        contactUsLink.addEventListener("click", function (event) {
+          event.preventDefault();
+          const targetId = this.getAttribute("href").substring(1);
+          const targetSection = document.getElementById(targetId);
+          if (targetSection) {
+            const headerHeight = document.querySelector("header").offsetHeight;
+            const targetPosition = targetSection.offsetTop - headerHeight;
+            window.scrollTo({
+              top: targetPosition,
+              behavior: "smooth",
+            });
+          }
         });
       });
     </script>
