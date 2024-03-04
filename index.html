@@ -150,7 +150,7 @@
         });
 
         const navLinks = document.querySelectorAll("nav a");
-        const contactUsLink = document.querySelector(".contact-us"); // Get the contact-us link
+        const contactUsLink = document.querySelector(".contact-us"); 
 
         navLinks.forEach(function (link) {
           link.addEventListener("click", function (event) {
@@ -182,7 +182,13 @@
             });
           }
         });
+
+        setTimeout(function() {
+        const mascot = document.querySelector(".mascot");
+        mascot.style.display = "block";
+        }, 2000);
       });
+      
     </script>
   </body>
 </html>
