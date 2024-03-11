@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bakery shop</title>
     <link rel="stylesheet" href="reset.css" />
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -27,32 +28,40 @@
       <h1>Best bakery shop in Moldova</h1>
     </section>
     <section id="why-us" class="why-us">
-      <h2>Why We Are Better Than Others</h2>
-      <div class="feature-container">
-        <div class="feature">
-          <img src="/assets/sandwich.png" alt="Feature 1" />
-          <h3>Gourmet Sandwiches and Savory Items</h3>
-          <p>
-            This provides customers with a wider range of options for breakfast,
-            lunch, or snacks throughout the day.
-          </p>
-        </div>
-        <div class="feature">
-          <img src="/assets/breads.jpg" alt="Feature 2" />
-          <h3>Artisanal Bread Selection</h3>
-          <p>
-            A variety of bread types such as sourdough, ciabatta, baguettes, and
-            specialty loaves made with high-quality ingredients and traditional
-            techniques.
-          </p>
-        </div>
-        <div class="feature">
-          <img src="/assets/cakes.jpg" alt="Feature 3" />
-          <h3>Freshly Baked Goods</h3>
-          <p>Pastries, cakes, cookies, and more!</p>
+      <div class="container">
+        <h2 class="text-center mb-4">Why We Are Better Than Others</h2>
+        <div class="row justify-content-center align-items-start">
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="feature text-center">
+              <img src="/assets/sandwich.png" alt="Feature 1" class="img-fluid mb-3" />
+              <h3>Gourmet Sandwiches and Savory Items</h3>
+              <p>
+                This provides customers with a wider range of options for breakfast,
+                lunch, or snacks throughout the day.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="feature text-center">
+              <img src="/assets/breads.jpg" alt="Feature 2" class="img-fluid mb-3" />
+              <h3>Artisanal Bread Selection</h3>
+              <p>
+                A variety of bread types such as sourdough, ciabatta, baguettes, and
+                specialty loaves made with high-quality ingredients and traditional
+                techniques.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="feature text-center">
+              <img src="/assets/cakes.jpg" alt="Feature 3" class="img-fluid mb-3" />
+              <h3>Freshly Baked Goods</h3>
+              <p>Pastries, cakes, cookies, and more!</p>
+            </div>
+          </div>
         </div>
       </div>
-    </section>
+    </section>  
     <section id="faq" class="faq">
       <h2>Frequently Asked Questions</h2>
       <div class="question">
@@ -80,33 +89,35 @@
         </p>
       </div>
     </section>
-    <section id="contact-form" class="contact-form">
-      <h2>Provide Your Contact Information</h2>
-      <form action="#" method="post">
-        <div class="form-group">
-          <label for="name">Name:</label>
-          <input type="text" id="name" name="name" required />
-        </div>
-        <div class="form-group">
-          <label for="surname">Surname:</label>
-          <input type="text" id="surname" name="surname" required />
-        </div>
-        <div class="form-group">
-          <label for="phone">Phone Number:</label>
-          <input
-            type="tel"
-            id="phone"
-            name="phone"
-            required
-            pattern="[0-9+]+"
-          />
-        </div>
-        <div class="form-group">
-          <label for="request">What can we help you with?</label>
-          <textarea id="request" name="request" rows="4" required></textarea>
-        </div>
-        <button type="submit">Recall me</button>
-      </form>
+    <section id="contact-form" class="contact-form py-5">
+      <div class="container">
+        <h2 class="text-center mb-4">Provide Your Contact Information</h2>
+        <form action="#" method="post">
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <label for="name" class="form-label fs-5">Name:</label>
+              <input type="text" id="name" name="name" class="form-control form-control-lg" required>
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="surname" class="form-label fs-5">Surname:</label>
+              <input type="text" id="surname" name="surname" class="form-control form-control-lg" required>
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="phone" class="form-label fs-5">Phone Number:</label>
+              <input type="tel" id="phone" name="phone" class="form-control form-control-lg" required pattern="[0-9+]+">
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="request" class="form-label fs-5">What can we help you with?</label>
+              <textarea id="request" name="request" class="form-control form-control-lg" rows="1" required></textarea>
+            </div>
+          </div>
+          <div class="row justify-content-center">
+            <div class="col-md-6">
+              <button type="submit" class="btn btn-dark btn-lg btn-block">Recall me</button>
+            </div>
+          </div>
+        </form>
+      </div>
     </section>
     <section id="call-us" class="call-us">
       <h1>OR</h1>
